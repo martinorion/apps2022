@@ -2,9 +2,12 @@ package com.appslab;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
+        totalDistance(0.2,0.4, 100);
+    }
 
-        System.out.println("Hello AppsLab 2020!");
+    static void totalDistance(double heightStair, double lengthStair, double total){
 
+        System.out.println((total / heightStair) *(lengthStair + heightStair ));
     }
 }
