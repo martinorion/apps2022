@@ -3,17 +3,14 @@ package com.appslab;
 public class Main {
 
     public static void main(String[] args){
-        Numbers(1, 2, 1 );
+        System.out.println(Triangle(2,5,2));
     }
-    static void Numbers(int a, int b, int c){
-        if(a == b && a != c || b == c && c != a || a == c && c != b){
-            System.out.println(2);
+
+    static boolean Triangle(int a, int b, int c){
+        if(a + b > c && b + c > a && a + c > b) {
+            return true;
         }
-        else if(a != b && a != c && b != c){
-            System.out.println(0);
-        }
-        else if (a == b && a == c){
-            System.out.println(3);
-        }
+        return false;
+    }
 }
-}
+
