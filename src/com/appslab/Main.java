@@ -2,15 +2,15 @@ package com.appslab;
 
 public class Main {
 
-    public static void main(String[] args){
-        System.out.println(Triangle(2,5,2));
+    public static void main(String[] args) {
+        System.out.println(PieceCake(11, 5, 2));
     }
 
-    static boolean Triangle(int a, int b, int c){
-        if(a + b > c && b + c > a && a + c > b) {
+    static boolean PieceCake(int a, int b, int c) {
+        if (b * c <= a) {
             return true;
         }
         return false;
     }
-}
 
+}
