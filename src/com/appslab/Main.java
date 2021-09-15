@@ -4,20 +4,20 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println(isPalindrome("patap"));
-        System.out.println(isPalindrome("tanap"));
+        System.out.println(gameRPS("paper","rock"));
+        System.out.println(gameRPS("scissors","rock"));
+        System.out.println(gameRPS("paper","paper"));
+
     }
 
-    static boolean isPalindrome(String str)
+    static String gameRPS(String player1, String player2)
     {
-        int i = 0, j = str.length() - 1;
-        while (i < j) {
-
-            if (str.charAt(i) != str.charAt(j))
-                return false;
-            i++;
-            j--;
+       if(player1 == "rock" && player2 == "scissors" || player1 == "scissors" && player2 == "paper" || player1 == "paper" && player2 == "rock"){
+       return "Player one wins";
+       }
+        if(player2 == "rock" && player1 == "scissors" || player2 == "scissors" && player1 == "paper" || player2 == "paper" && player1 == "rock"){
+            return "Player two wins";
         }
-        return true;
-}
+        return "Tie";
+    }
 }
