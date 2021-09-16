@@ -8,19 +8,19 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println(differenceMaxMin(new int[]{-2, 1, 2, 3, 4, 5, 6}));
+        System.out.println(warOfNumbers(new int[]{1, 2, 3, 4, 5, 6}));
     }
-   static int differenceMaxMin(int[] array){
-
-        int min = Arrays.stream(array)
-               .min()
-               .getAsInt();
-
-        int max = Arrays.stream(array)
-               .max()
-               .getAsInt();
-
-        return min > max? min - max : max - min;
-
+   static int warOfNumbers(int[] array){
+    int a = 0;
+    int b = 0;
+        for (int i = 0; i < array.length; i++){
+            if(array[i] % 2 == 0){
+            a += array[i];
+            }
+            else{
+             b += array[i];
+            }
+        }
+        return a < b? b - a : a - b;
    }
 }
